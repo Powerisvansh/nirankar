@@ -4,344 +4,74 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GX Works2 1.620W — Download</title>
-<meta name="description" content="Download GX Works2 version 1.620W for PLC programming. Split archive, checksums and installation guide.">
 <style>
-  :root{
-    --bg:#08101c;
-    --bg2:#0c1626;
-    --card:#101d31;
-    --line:#1e3049;
-    --text:#e8eef8;
-    --muted:#8aa0bd;
-    --red:#e60012;
-    --red2:#ff3344;
-    --cyan:#38bdf8;
-    --green:#34d399;
-  }
+  :root{--red:#e60012;--red2:#ff3344}
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
   body{
-    margin:0;
+    margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:#e8eef8;
     background:
-      radial-gradient(900px 500px at 15% -10%, rgba(230,0,18,.18), transparent 60%),
-      radial-gradient(900px 500px at 90% 0%, rgba(56,189,248,.12), transparent 55%),
-      var(--bg);
-    color:var(--text);
-    line-height:1.6;
+      radial-gradient(700px 400px at 50% -10%, rgba(230,0,18,.22), transparent 65%),
+      #08101c;
     -webkit-font-smoothing:antialiased;
+    text-align:center;
   }
-  a{color:var(--cyan);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-
-  header{border-bottom:1px solid var(--line);backdrop-filter:blur(8px);position:sticky;top:0;background:rgba(8,16,28,.82);z-index:10}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.2px}
   .logo{
-    width:34px;height:34px;border-radius:8px;
+    width:64px;height:64px;margin:0 auto 22px;border-radius:16px;
     background:linear-gradient(135deg,var(--red),#7a000a);
-    display:grid;place-items:center;font-size:13px;font-weight:800;color:#fff;
-    box-shadow:0 0 0 1px rgba(255,255,255,.08),0 8px 24px rgba(230,0,18,.35);
+    display:grid;place-items:center;font-size:22px;font-weight:800;letter-spacing:.5px;
+    box-shadow:0 0 0 1px rgba(255,255,255,.08),0 16px 40px rgba(230,0,18,.4);
   }
-  .nav-links{display:flex;gap:22px;font-size:14px}
-  .nav-links a{color:var(--muted)}
-  .nav-links a:hover{color:var(--text);text-decoration:none}
-
-  .hero{padding:76px 0 40px;position:relative;overflow:hidden}
-  .hero::after{
-    content:"";position:absolute;inset:0;
-    background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
-    background-size:44px 44px;
-    mask-image:radial-gradient(ellipse at 50% 0%,#000 30%,transparent 75%);
-    pointer-events:none;
-  }
-  .badge{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:6px 12px;border-radius:999px;font-size:12.5px;font-weight:600;
-    color:var(--green);background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);
-  }
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
-  h1{font-size:clamp(34px,6vw,58px);line-height:1.06;margin:18px 0 14px;letter-spacing:-1.5px}
+  h1{margin:0;font-size:clamp(30px,6vw,44px);letter-spacing:-1px;line-height:1.1}
   h1 span{color:var(--red2)}
-  .sub{font-size:18px;color:var(--muted);max-width:640px;margin:0 0 26px}
-  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
-  .chip{font-size:13px;color:#c7d5e8;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:8px;padding:7px 12px}
-  .chip b{color:#fff;font-weight:600}
-
-  .downloads{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
-  .dl{
-    display:flex;align-items:center;gap:16px;
-    background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0));
-    border:1px solid var(--line);border-radius:14px;padding:18px 20px;
-    transition:.18s border-color,.18s transform,.18s box-shadow;
+  .meta{margin:14px 0 30px;color:#8aa0bd;font-size:15px}
+  .meta b{color:#dbe7f5;font-weight:600}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:11px;
+    min-width:270px;padding:17px 30px;border-radius:12px;border:none;cursor:pointer;
+    font-size:17px;font-weight:700;color:#fff;text-decoration:none;
+    background:linear-gradient(180deg,#ff1f30,var(--red));
+    box-shadow:0 10px 28px rgba(230,0,18,.4),inset 0 1px 0 rgba(255,255,255,.25);
+    transition:transform .15s, box-shadow .15s, filter .15s;
   }
-  .dl:hover{border-color:#2d4a6e;transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.35);text-decoration:none}
-  .dl-icon{
-    flex:0 0 46px;height:46px;border-radius:11px;display:grid;place-items:center;
-    background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.3);color:var(--cyan);font-weight:800;font-size:13px;
-  }
-  .dl-main{flex:1;min-width:0}
-  .dl-title{font-weight:650;color:#fff;font-size:15.5px}
-  .dl-meta{font-size:12.5px;color:var(--muted)}
-  .dl-arrow{color:var(--muted);font-size:20px}
-  .dl:hover .dl-arrow{color:var(--cyan)}
-
-  .note{
-    display:flex;gap:12px;align-items:flex-start;
-    border:1px solid rgba(230,0,18,.35);background:rgba(230,0,18,.08);
-    border-radius:12px;padding:14px 16px;font-size:14px;color:#ffd9dd;margin-bottom:8px;
-  }
-  .note strong{color:#fff}
-
-  section{padding:56px 0;border-top:1px solid var(--line)}
-  h2{font-size:26px;margin:0 0 8px;letter-spacing:-.4px}
-  .lead{color:var(--muted);margin:0 0 28px;max-width:680px}
-
-  .steps{display:grid;gap:14px}
-  .step{display:flex;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
-  .num{
-    flex:0 0 32px;height:32px;border-radius:9px;display:grid;place-items:center;
-    background:rgba(230,0,18,.14);border:1px solid rgba(230,0,18,.4);color:#ff8490;font-weight:700;font-size:14px;
-  }
-  .step h3{margin:0 0 4px;font-size:15.5px}
-  .step p{margin:0;color:var(--muted);font-size:14px}
-  code{
-    font-family:"Cascadia Code",Consolas,ui-monospace,monospace;font-size:.88em;
-    background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:6px;padding:2px 6px;color:#dbe7f5;
-  }
-
-  .grid2{display:grid;grid-template-columns:1.15fr .85fr;gap:28px}
-  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
-  .panel h3{margin:0 0 14px;font-size:16px}
-  table{width:100%;border-collapse:collapse;font-size:14px}
-  td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06);color:var(--muted)}
-  td:last-child{color:var(--text);text-align:right;font-weight:500}
-  tr:last-child td{border-bottom:none}
-  ul{margin:0;padding-left:18px;color:var(--muted);font-size:14.5px}
-  li{margin:7px 0}
-
-  .sha{display:flex;align-items:center;gap:10px;margin:10px 0 0}
-  .sha input{
-    flex:1;min-width:0;font-family:Consolas,monospace;font-size:12px;
-    background:#0a1523;border:1px solid var(--line);border-radius:8px;color:#a9bdd6;padding:9px 11px;
-  }
-  .copy{background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.35);color:var(--cyan);border-radius:8px;padding:9px 13px;font-size:12.5px;cursor:pointer;font-weight:600}
-  .copy:hover{background:rgba(56,189,248,.2)}
-
-  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
-  details summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center}
-  details summary::-webkit-details-marker{display:none}
-  details summary::after{content:"+";color:var(--muted);font-size:18px}
-  details[open] summary::after{content:"–"}
-  details p{color:var(--muted);font-size:14px;margin:12px 0 0}
-
-  footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--muted);font-size:13px}
-  .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
-  .disclaimer{margin-top:14px;max-width:760px;line-height:1.65;font-size:12.5px;color:#6d819c}
-
-  @media(max-width:820px){
-    .downloads,.grid2{grid-template-columns:1fr}
-    .nav-links{display:none}
-    .hero{padding-top:52px}
-  }
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.07);box-shadow:0 16px 36px rgba(230,0,18,.5)}
+  .btn:active{transform:translateY(0)}
+  .btn svg{width:20px;height:20px}
+  .hint{margin-top:20px;color:#6d819c;font-size:12.5px;line-height:1.6}
+  .hint code{font-family:Consolas,monospace;background:rgba(255,255,255,.06);padding:1px 5px;border-radius:4px}
 </style>
 </head>
 <body>
-
-<header>
-  <div class="wrap nav">
-    <div class="brand"><div class="logo">GX</div> nirankar / GX Works2</div>
-    <nav class="nav-links">
-      <a href="#download">Download</a>
-      <a href="#install">How to install</a>
-      <a href="#requirements">Requirements</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <div class="wrap hero">
-    <span class="badge"><span class="dot"></span> v1.620W · Split archive · Verified checksums</span>
+  <main>
+    <div class="logo">GX</div>
     <h1>GX Works2 <span>1.620W</span></h1>
-    <p class="sub">PLC programming and configuration software for the Mitsubishi MELSEC family. Download the complete package, extract with 7-Zip and install.</p>
-    <div class="chips">
-      <div class="chip">Total <b>{{TOTAL_SIZE}}</b></div>
-      <div class="chip"><b>{{PART_COUNT}}</b> archive parts</div>
-      <div class="chip">Format <b>ZIP (multi-volume)</b></div>
-      <div class="chip">Platform <b>Windows</b></div>
-    </div>
-
-    <div id="download" class="downloads">
-      <a class="dl" href="{{PART1_URL}}">
-        <div class="dl-icon">001</div>
-        <div class="dl-main">
-          <div class="dl-title">GXWorks2_1.620W.zip.001</div>
-          <div class="dl-meta">{{PART1_SIZE}} · Download first</div>
-        </div>
-        <div class="dl-arrow">↓</div>
-      </a>
-      <a class="dl" href="{{PART2_URL}}">
-        <div class="dl-icon">002</div>
-        <div class="dl-main">
-          <div class="dl-title">GXWorks2_1.620W.zip.002</div>
-          <div class="dl-meta">{{PART2_SIZE}} · Download after 001</div>
-        </div>
-        <div class="dl-arrow">↓</div>
-      </a>
-      {{PART3_CARD}}
-    </div>
-
-    <div class="note">
-      <span>⚠</span>
-      <div><strong>Important:</strong> download <em>all</em> parts into the <em>same folder</em> before extracting. Extract <code>.001</code> only — 7-Zip will join the parts automatically. Do not rename the files.</div>
-    </div>
-  </div>
-
-  <section id="install">
-    <div class="wrap">
-      <h2>How to install</h2>
-      <p class="lead">The installer is shipped as a split ZIP archive. Follow these steps in order.</p>
-      <div class="steps">
-        <div class="step">
-          <div class="num">1</div>
-          <div>
-            <h3>Install 7-Zip</h3>
-            <p>Download and install <a href="https://www.7-zip.org/" target="_blank" rel="noopener">7-Zip</a> (free). Windows Explorer cannot open multi-volume archives on its own.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="num">2</div>
-          <div>
-            <h3>Download all parts</h3>
-            <p>Save <code>.zip.001</code>{{PART_LIST}} into one folder. The total download is {{TOTAL_SIZE}}.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="num">3</div>
-          <div>
-            <h3>Extract</h3>
-            <p>Right-click <code>GXWorks2_1.620W.zip.001</code> → <em>7-Zip</em> → <em>Extract Here</em>. Wait until all 932 files are extracted to <code>GXWorks2_1.620W</code>.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="num">4</div>
-          <div>
-            <h3>Run setup</h3>
-            <p>Open the extracted folder and run <code>setup.exe</code> from the <code>GX Works2 1.620W EU</code> directory. Use an account with administrator rights.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="num">5</div>
-          <div>
-            <h3>Activate</h3>
-            <p>Enter the serial number during setup. The serial is provided in <code>GXWorks2-Serial Number.txt</code> inside the archive.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="requirements">
-    <div class="wrap">
-      <h2>System requirements</h2>
-      <p class="lead">Recommended environment for GX Works2 1.620W.</p>
-      <div class="grid2">
-        <div class="panel">
-          <h3>Minimum configuration</h3>
-          <table>
-            <tr><td>Operating system</td><td>Windows 7 SP1 / 8.1 / 10 / 11</td></tr>
-            <tr><td>Processor</td><td>Intel Core 2 Duo or better</td></tr>
-            <tr><td>Memory</td><td>2 GB RAM (4 GB recommended)</td></tr>
-            <tr><td>Free disk space</td><td>4 GB for install + archive</td></tr>
-            <tr><td>Display</td><td>1024 × 768, 16-bit colour</td></tr>
-            <tr><td>Interface</td><td>USB / RS-232 / Ethernet (for PLC)</td></tr>
-          </table>
-        </div>
-        <div class="panel">
-          <h3>Package contents</h3>
-          <ul>
-            <li>GX Works2 1.620W installer (EU)</li>
-            <li>e-Manual Viewer and documentation</li>
-            <li>Serial number file</li>
-            <li>932 files, full installation media</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="checksums">
-    <div class="wrap">
-      <h2>Verify your download</h2>
-      <p class="lead">Compare the SHA-256 hash of each part after downloading. In PowerShell run <code>Get-FileHash &lt;file&gt; -Algorithm SHA256</code>.</p>
-      <div class="panel">
-        <h3>GXWorks2_1.620W.zip.001 — {{PART1_SIZE}}</h3>
-        <div class="sha">
-          <input readonly value="{{SHA1}}">
-          <button class="copy" onclick="copyHash(this)">Copy</button>
-        </div>
-        <div style="height:18px"></div>
-        <h3>GXWorks2_1.620W.zip.002 — {{PART2_SIZE}}</h3>
-        <div class="sha">
-          <input readonly value="{{SHA2}}">
-          <button class="copy" onclick="copyHash(this)">Copy</button>
-        </div>
-        {{SHA3_BLOCK}}
-      </div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="wrap">
-      <h2>FAQ</h2>
-      <p class="lead">Common questions about the download and installation.</p>
-      <details>
-        <summary>Why is the download split into parts?</summary>
-        <p>GitHub limits each release file to 2 GB. The archive is split into parts under that limit. Download all parts into the same folder and extract the .001 file — 7-Zip joins them automatically.</p>
-      </details>
-      <details>
-        <summary>7-Zip says the archive is corrupt</summary>
-        <p>One of the parts is incomplete. Re-download the part whose SHA-256 does not match the checksum above. Make sure no part was renamed or downloaded twice with a different filename.</p>
-      </details>
-      <details>
-        <summary>Can I extract with WinRAR or Windows Explorer?</summary>
-        <p>WinRAR works if you open the .001 file. Windows Explorer's built-in ZIP support does not handle multi-volume archives — use 7-Zip.</p>
-      </details>
-      <details>
-        <summary>Where do I get the serial number?</summary>
-        <p>It is included in the archive as <code>GXWorks2-Serial Number.txt</code>. Use the serial during installation and keep it for future re-installs.</p>
-      </details>
-      <details>
-        <summary>The installer does not start</summary>
-        <p>Right-click the setup executable and choose <em>Run as administrator</em>. Also temporarily disable antivirus real-time scanning, which sometimes blocks older installers.</p>
-      </details>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>GX Works2 1.620W · Archived and checksummed</div>
-      <div><a href="https://github.com/Powerisvansh/nirankar">GitHub repository</a> · <a href="#download">Download</a></div>
-    </div>
-    <p class="disclaimer">GX Works2 is a product of Mitsubishi Electric Corporation. This page only mirrors an installation package for personal/educational use. All trademarks belong to their respective owners. If you are the rights holder and want this removed, open an issue on the repository.</p>
-  </div>
-</footer>
-
+    <p class="meta"><b>3.21 GB</b> · Windows · 932 files</p>
+    <a class="btn" id="dl" href="https://github.com/Powerisvansh/nirankar/releases/download/v1.620/GXWorks2_1.620W.zip.001">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>
+      Download
+    </a>
+    <p class="hint">Both parts download automatically · extract <code>.001</code> with 7-Zip</p>
+  </main>
 <script>
-  function copyHash(btn){
-    const input = btn.parentElement.querySelector('input');
-    input.select();
-    input.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(input.value).then(() => {
-      const old = btn.textContent;
-      btn.textContent = 'Copied';
-      setTimeout(() => btn.textContent = old, 1400);
+  const parts = [
+    "https://github.com/Powerisvansh/nirankar/releases/download/v1.620/GXWorks2_1.620W.zip.001",
+    "https://github.com/Powerisvansh/nirankar/releases/download/v1.620/GXWorks2_1.620W.zip.002"
+  ];
+  document.getElementById('dl').addEventListener('click', function (e) {
+    if (parts.length < 2) return;
+    e.preventDefault();
+    parts.forEach(function (url, i) {
+      setTimeout(function () {
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = '';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      }, i * 2500);
     });
-  }
+  });
 </script>
 </body>
 </html>

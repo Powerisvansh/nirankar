@@ -1,39 +1,14 @@
-# GX Works2 1.620W — Download Mirror
+# GX Works2 1.620W
 
-Static download page for **GX Works2 1.620W** (Mitsubishi MELSEC PLC programming software).
+Download: **https://powerisvansh.github.io/nirankar/**
 
-The installation media is distributed as a split ZIP archive through GitHub Releases:
+Split ZIP archive (2 parts, 3.21 GB total):
 
-| Part | File | Size |
-|------|------|------|
-| 1 | `GXWorks2_1.620W.zip.001` | {{PART1_SIZE}} |
-| 2 | `GXWorks2_1.620W.zip.002` | {{PART2_SIZE}} |
+| Part | File | Size | SHA-256 |
+|------|------|------|---------|
+| 1 | `GXWorks2_1.620W.zip.001` | 1.76 GB | `ce7405b4305ed754c6c84e939087140c5eb97e007aa59ed13a28b72754151089` |
+| 2 | `GXWorks2_1.620W.zip.002` | 1.45 GB | `a8a71f9a673c339ff6f8229e3a8a0f036e5739bdf74e0bf984ffab1dc94833ce` |
 
-**Total download: {{TOTAL_SIZE}}** (extracted: 3.21 GB, 932 files)
+Download both parts into the same folder, then extract `GXWorks2_1.620W.zip.001` with [7-Zip](https://www.7-zip.org/).
 
-## Download
-
-Get all parts from the [latest release](https://github.com/Powerisvansh/nirankar/releases/latest), save them in the **same folder**, then extract `GXWorks2_1.620W.zip.001` with [7-Zip](https://www.7-zip.org/). 7-Zip joins the parts automatically.
-
-## Website
-
-The page is plain static HTML (`index.html`) served with GitHub Pages:
-
-- https://powerisvansh.github.io/nirankar/
-
-## Checksums (SHA-256)
-
-```
-{{SHA1}}  GXWorks2_1.620W.zip.001
-{{SHA2}}  GXWorks2_1.620W.zip.002
-```
-
-Verify on Windows PowerShell:
-
-```powershell
-Get-FileHash .\GXWorks2_1.620W.zip.001 -Algorithm SHA256
-```
-
-## Disclaimer
-
-GX Works2 is a product of Mitsubishi Electric Corporation. This repository only hosts an installation package for personal/educational use. All trademarks belong to their respective owners.
+GX Works2 is a product of Mitsubishi Electric Corporation. This repository only hosts an installation package for personal/educational use.
