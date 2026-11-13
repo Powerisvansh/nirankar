@@ -38,6 +38,12 @@
   .btn:hover{transform:translateY(-2px);filter:brightness(1.07);box-shadow:0 16px 36px rgba(230,0,18,.5)}
   .btn:active{transform:translateY(0)}
   .btn svg{width:20px;height:20px}
+  .btn.secondary{
+    margin-top:14px;min-width:270px;
+    background:rgba(255,255,255,.04);color:#e8eef8;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);
+  }
+  .btn.secondary:hover{filter:none;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.24),0 12px 28px rgba(0,0,0,.35)}
   .hint{margin-top:20px;color:#6d819c;font-size:12.5px;line-height:1.6}
   .hint code{font-family:Consolas,monospace;background:rgba(255,255,255,.06);padding:1px 5px;border-radius:4px}
 </style>
@@ -51,8 +57,12 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>
       Download
     </a>
-    <p class="hint">Both parts download automatically · extract <code>.001</code> with 7-Zip</p>
-  </main>
+    <br>
+    <a class="btn secondary" href="https://www.7-zip.org/download.html" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>
+      Download 7-Zip
+    </a>
+    <p class="hint">Both parts download automatically · extract <code>.001</code> with 7-Zip</p>  </main>
 <script>
   const parts = [
     "https://github.com/Powerisvansh/nirankar/releases/download/v1.620/GXWorks2_1.620W.zip.001",
